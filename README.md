@@ -44,13 +44,19 @@ Blagoja ` Billy ' Celeski is an Australian footballer who plays as a midfielder 
 
 Blagoja ` Billy ' Celeski is an Australian footballer who plays as a midfielder for the Newcastle Jets .	plays	Blagoja ` Billy ' Celeski	as a midfielder
 ```
-测试文件输出格式为 [sentences] [relation] [arg_0] [arg_1],...,[arg_n]\\
+测试文件输出格式为 [sentences] [relation] [arg_0] [arg_1],...,[arg_n]
+
 即，句子（每个word以空格分隔），relation，与relation相关的arguments。每部分内容（[]内的部分）以一个tab分隔。需要注意的是同一个句子可能会被预测出不同的结果，根本原因是一个句子中可能含有多个不同的relation。模型的输出以及test_gold（测试集标准答案）均为以上格式。
 
 ## 测试结果指标
-测试结果指标主要包括三个指标：precision, recall, f1。\\
-评测过程中将relation和arguments统一视为entities参与评测。\\
-评测指标可选模式很多，主要是一些判断是否正确的标准上的区别（比如span和text都要正确，或者仅需要text正确）。但大体都遵循以下计算方式。\\
-precision = 预测正确的enties数量/预测entities数量\\
-recall = 预测正确的enties数量/gold的entities数量\\
-f1 = 2\*precision\*recall / (precision+recall)\\
+测试结果指标主要包括三个指标：precision, recall, f1。
+
+评测过程中将relation和arguments统一视为entities参与评测。
+
+评测指标可选模式很多，主要是一些判断是否正确的标准上的区别（比如span和text都要正确，或者仅需要text正确）。但大体都遵循以下计算方式。
+
+precision = 预测正确的enties数量/预测entities数量
+
+recall = 预测正确的enties数量/gold的entities数量
+
+f1 = 2\*precision\*recall / (precision+recall)
