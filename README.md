@@ -7,6 +7,8 @@ python eval.sh --CFG xx.cfg
 ```
 其中cfg文件位于 /configs文件夹中，在cfg文件中给定测试文件，模型输出结果，以及测试结果存放路径即可。
 
+/data/openie4 有一份openie4数据集上的模型输出结果
+
 ## 训练集
 其格式如下：
 ```
@@ -53,7 +55,7 @@ Blagoja ` Billy ' Celeski is an Australian footballer who plays as a midfielder 
 
 评测过程中将relation和arguments统一视为entities参与评测。
 
-评测指标可选模式很多，主要是一些判断是否正确的标准上的区别（比如span和text都要正确，或者仅需要text正确）。但大体都遵循以下计算方式。
+评测指标可选模式很多，主要是一些判断是否正确的标准上的区别（比如span和text都要正确，或者仅需要text正确）。但大体都遵循以下计算方式。具体情况可以参考CaRB评测指标的原论文 https://aclanthology.org/D19-1651.pdf
 
 precision = 预测正确的enties数量/预测entities数量
 
