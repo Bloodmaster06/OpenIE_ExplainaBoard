@@ -1,0 +1,6 @@
+# check points files
+/ckpts
+*.pyc
+*.pt
+/test.*
+/data/corups/openie4
