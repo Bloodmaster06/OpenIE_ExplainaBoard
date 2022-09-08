@@ -38,12 +38,12 @@ if __name__ == "__main__":
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     args = parser.parse_args()
     data_dir = './data/openie4/'
-    gold_file = data_dir + 'test.gold'
-    output = data_dir + 'test_output'
+    gold_output = data_dir + 'test.gold'
+    model_output = data_dir + 'test_output'
     result = data_dir + 'result'
     error_log = data_dir + 'error_log'
     auc, precision, recall, f1 = eval(
-        gold_file, 
-        output, 
+        gold_output, 
+        mnodel_output, 
         result,
         error_log)
