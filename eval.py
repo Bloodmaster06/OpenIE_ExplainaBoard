@@ -17,7 +17,7 @@ def eval(gold_output, model_output, result, error_log):
             result(str): the path of the evaluation result.
             error_log(str): the path of the error log.
         """
-    benchmark = Benchmark(gold_file)
+    benchmark = Benchmark(gold_output)
     predicted = GoldReader()
     predicted.read(model_output)
     matching_func = Matcher.binary_linient_tuple_match
