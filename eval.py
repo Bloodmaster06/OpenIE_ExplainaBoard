@@ -44,6 +44,6 @@ if __name__ == "__main__":
     error_log = data_dir + 'error_log'
     auc, precision, recall, f1 = eval(
         gold_output, 
-        mnodel_output, 
+        model_output, 
         result,
         error_log)
