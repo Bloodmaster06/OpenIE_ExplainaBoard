@@ -19,17 +19,10 @@ logging.basicConfig(level = logging.INFO)
 
 def eval(cfg, test_type):
     """Function for evaluation."""
-    
-    if test_type == 'test':
-        gold_path = cfg.TEST_GOLD
-        output_fn = cfg.TEST_OUT
-        outfile_path = cfg.TEST_OUTPUT
-        error_file = cfg.TEST_ERROR_LOG
-    elif test_type == 'dev':
-        gold_path = cfg.DEV_GOLD
-        output_fn = cfg.DEV_OUT
-        outfile_path = cfg.DEV_OUTPUT
-        error_file = cfg.DEV_ERROR_LOG
+    gold_path = cfg.TEST_GOLD
+    output_fn = cfg.TEST_OUT
+    outfile_path = cfg.TEST_OUTPUT
+    error_file = cfg.TEST_ERROR_LOG
     benchmark = Benchmark(gold_path)
     predicted = GoldReader()
     predicted.read(outfile_path)
